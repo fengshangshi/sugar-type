@@ -1,8 +1,8 @@
-#sugar-type
+# sugar-type
 sugar2.0框架的对象类型检测类库
 
-##API
-###inspect(target)
+## API
+### inspect(target)
 * target - 对象，任何类型的对象
 * 返回 - 该对象的类型，字符串表示，如"string"，"number"，"error"，"map"等
 
@@ -25,7 +25,7 @@ type.inspect(new Map()); //'map'
 
 还有更加快捷的判断，返回布尔值，如下：
 
-###isEmpty(target)
+### isEmpty(target)
 检查Array、Object、Map、Set4个对象是否为空，其他类型会返回true。
 
 ```
@@ -34,14 +34,14 @@ type.isEmpty({a: 1}); // false
 type.isEmpty(123); // true
 ```
 
-###isObject(target)
+### isObject(target)
 返回是否为对象类型，用法如下：
 
 ```
 type.isObject({}); // true
 type.isObject(123); // false
 ```
-###isArray(target)
+### isArray(target)
 返回是否为数组类型，用法如下：
 
 ```
@@ -49,7 +49,7 @@ type.isArray([1, 2, 3]); // true
 type.isArray('string'); // false
 ```
 
-###isFunction(target)
+### isFunction(target)
 返回是否为函数类型，用法如下：
 
 ```
@@ -57,7 +57,7 @@ type.isFunction(function(){}); // true
 type.isFunction('string'); // false
 ```
 
-###isRegExp(target)
+### isRegExp(target)
 返回是否为正则类型，用法如下：
 
 ```
@@ -65,7 +65,7 @@ type.isRegExp(/^abc/g); // true
 type.isRegExp(true); // false
 ```
 
-###isDate(target)
+### isDate(target)
 返回是否为日期类型，用法如下：
 
 ```
@@ -73,7 +73,7 @@ type.isDate(new Date()); // true
 type.isDate(true); // false
 ```
 
-###isMath(target)
+### isMath(target)
 返回是否为数学类型，用法如下：
 
 ```
@@ -81,7 +81,7 @@ type.isMath(Math); // true
 type.isMath(123); // false
 ```
 
-###isError(target)
+### isError(target)
 返回是否为错误类型，用法如下：
 
 ```
@@ -90,7 +90,7 @@ type.isError(true); // false
 ```
 
 
-###isJSON(target)
+### isJSON(target)
 返回是否为JSON类型，用法如下：
 
 ```
@@ -100,7 +100,7 @@ type.isJSON(true); // false
 
 
 
-###isArguments(target)
+### isArguments(target)
 返回是否为参数类型，用在函数里的参数数组判断，用法如下：
 
 ```
@@ -113,7 +113,7 @@ fn('param');
 
 
 
-###isMap(target)
+### isMap(target)
 返回是否为map类型，用法如下：
 
 ```
@@ -126,7 +126,7 @@ type.isMap(true); // false
 ```
 
 
-###isSet(target)
+### isSet(target)
 返回是否为set类型，用法如下：
 
 ```
@@ -140,35 +140,30 @@ type.isMap(true); // false
 
 
 
-###isString(target)
+### isString(target)
 返回是否为字符串类型
 
 
 
 
 
-###isNumber(target)
+### isNumber(target)
 返回是否为数字类型
 
 
 
 
-###isBoolean(target)
+### isBoolean(target)
 返回是否为布尔类型
 
 
 
 
-###isNull(target)
+### isNull(target)
 返回是否为null类型
 
 
 
 
-###isUndefined(target)
+### isUndefined(target)
 返回是否为undefined类型
-
-
-
-
-
