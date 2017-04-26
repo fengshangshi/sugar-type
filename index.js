@@ -77,6 +77,24 @@ class Type {
     isUndefined(target) {
         return this.inspect(target) === 'undefined';
     }
+
+    isEmpty(target) {
+        if (this.isArray(target) || this.isArguments(target)) {
+            return !target.length;
+        }
+
+        if (this.isMap(target) || this.isSet(target)) {
+            return !target.size;
+        }
+
+        for (let key in target) {
+            if (target.hasOwnProperty(key)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
 
 module.exports = new Type;

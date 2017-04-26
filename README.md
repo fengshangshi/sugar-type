@@ -25,6 +25,15 @@ type.inspect(new Map()); //'map'
 
 还有更加快捷的判断，返回布尔值，如下：
 
+###isEmpty(target)
+检查Array、Object、Map、Set4个对象是否为空，其他类型会返回true。
+
+```
+type.isEmpty({}); // true
+type.isEmpty({a: 1}); // false
+type.isEmpty(123); // true
+```
+
 ###isObject(target)
 返回是否为对象类型，用法如下：
 
