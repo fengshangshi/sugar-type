@@ -5,8 +5,6 @@
 'use strict'
 
 class Type {
-    constructor() {}
-
     inspect(target) {
         const type = Object.prototype.toString.call(target).toLowerCase();
         const regex = /^\[object (\w+)\]$/;
@@ -98,3 +96,4 @@ class Type {
 }
 
 module.exports = new Type;
+export default new Type;
