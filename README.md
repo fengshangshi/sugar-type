@@ -8,7 +8,7 @@ sugar2.0框架的对象类型检测类库
 
 用例如下:
 
-```
+```js
 const type = require('sugar-type');
 
 type.inspect([]); //'array'
@@ -28,23 +28,31 @@ type.inspect(new Map()); //'map'
 ### isEmpty(target)
 检查Array、Object、Map、Set4个对象是否为空，其他类型会返回true。
 
-```
+```js
 type.isEmpty({}); // true
 type.isEmpty({a: 1}); // false
 type.isEmpty(123); // true
 ```
 
+### isSymbol(target)
+返回是否为对象类型，用法如下：
+
+```js
+type.isSymbol(Symbol('symbol')); // true
+type.isSymbol(123); // false
+```
+
 ### isObject(target)
 返回是否为对象类型，用法如下：
 
-```
+```js
 type.isObject({}); // true
 type.isObject(123); // false
 ```
 ### isArray(target)
 返回是否为数组类型，用法如下：
 
-```
+```js
 type.isArray([1, 2, 3]); // true
 type.isArray('string'); // false
 ```
@@ -52,7 +60,7 @@ type.isArray('string'); // false
 ### isFunction(target)
 返回是否为函数类型，用法如下：
 
-```
+```js
 type.isFunction(function(){}); // true
 type.isFunction('string'); // false
 ```
@@ -60,7 +68,7 @@ type.isFunction('string'); // false
 ### isRegExp(target)
 返回是否为正则类型，用法如下：
 
-```
+```js
 type.isRegExp(/^abc/g); // true
 type.isRegExp(true); // false
 ```
@@ -68,7 +76,7 @@ type.isRegExp(true); // false
 ### isDate(target)
 返回是否为日期类型，用法如下：
 
-```
+```js
 type.isDate(new Date()); // true
 type.isDate(true); // false
 ```
@@ -76,7 +84,7 @@ type.isDate(true); // false
 ### isMath(target)
 返回是否为数学类型，用法如下：
 
-```
+```js
 type.isMath(Math); // true
 type.isMath(123); // false
 ```
@@ -84,7 +92,7 @@ type.isMath(123); // false
 ### isError(target)
 返回是否为错误类型，用法如下：
 
-```
+```js
 type.isError(new Error('这里有问题')); // true
 type.isError(true); // false
 ```
@@ -93,7 +101,7 @@ type.isError(true); // false
 ### isJSON(target)
 返回是否为JSON类型，用法如下：
 
-```
+```js
 type.isJSON(JSON); // true
 type.isJSON(true); // false
 ```
@@ -103,7 +111,7 @@ type.isJSON(true); // false
 ### isArguments(target)
 返回是否为参数类型，用在函数里的参数数组判断，用法如下：
 
-```
+```js
 function fn(param) {
 	console.log(type.isArguments(arguments)); // true
 	console.log(type.isArguments(true)); // false
@@ -116,7 +124,7 @@ fn('param');
 ### isMap(target)
 返回是否为map类型，用法如下：
 
-```
+```js
 let map = new Map();
 map.set(1, '我是小1');
 map.set(2, '我是小二');
@@ -129,7 +137,7 @@ type.isMap(true); // false
 ### isSet(target)
 返回是否为set类型，用法如下：
 
-```
+```js
 let set = new Set();
 set.add(1);
 set.add(2);
